@@ -31,6 +31,7 @@ import SupplierDashboardPage from "./pages/supplier/DashboardPage";
 import SupplierEventsListPage from "./pages/supplier/EventsListPage";
 import SupplierReportsPage from "./pages/supplier/ReportsPage";
 import SupplierSettingsPage from "./pages/supplier/SettingsPage";
+import SupplierNotificationsPage from "./pages/supplier/NotificationsPage";
 
 // Public
 import HomePage from "./pages/public/HomePage";
@@ -60,6 +61,7 @@ const App = () => (
             <Route index element={<SupplierDashboardPage />} />
             <Route path="events" element={<SupplierEventsListPage />} />
             <Route path="events/:id" element={<SupplierEventsListPage />} />
+            <Route path="notifications" element={<SupplierNotificationsPage />} />
             <Route path="reports" element={<SupplierReportsPage />} />
             <Route path="settings" element={<SupplierSettingsPage />} />
           </Route>
