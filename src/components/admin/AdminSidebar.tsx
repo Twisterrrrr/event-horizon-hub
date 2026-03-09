@@ -1,7 +1,7 @@
 import {
   LayoutDashboard, Calendar, ShoppingCart, MapPin, Building2,
   Truck, FileText, FolderOpen, Tags, Star, Search, Settings,
-  HelpCircle, BarChart3, Users, Globe
+  HelpCircle, BarChart3, Users, Globe, ShieldCheck
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -26,6 +26,7 @@ const mainNav = [
 
 const catalogNav = [
   { title: "События", url: "/admin/events", icon: Calendar, badge: 8 },
+  { title: "Модерация", url: "/admin/moderation", icon: ShieldCheck, badge: 4, attention: true },
   { title: "Площадки", url: "/admin/venues", icon: Building2 },
   { title: "Города", url: "/admin/cities", icon: Globe },
   { title: "Поставщики", url: "/admin/suppliers", icon: Truck, attention: true },

@@ -21,6 +21,7 @@ import ReconciliationPage from "./pages/admin/ReconciliationPage";
 import SeoAuditPage from "./pages/admin/SeoAuditPage";
 import SettingsPage from "./pages/admin/SettingsPage";
 import SupportListPage from "./pages/admin/SupportListPage";
+import ModerationPage from "./pages/admin/ModerationPage";
 import { PromoBlocksPage, UsersPage } from "./pages/admin/CrudPages";
 
 // Supplier
@@ -67,6 +68,7 @@ const App = () => (
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<DashboardPage />} />
             <Route path="events" element={<EventsListPage />} />
+            <Route path="moderation" element={<ModerationPage />} />
             <Route path="orders" element={<OrdersListPage />} />
             <Route path="venues" element={<VenuesListPage />} />
             <Route path="cities" element={<CitiesListPage />} />
