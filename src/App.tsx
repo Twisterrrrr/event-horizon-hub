@@ -3,8 +3,19 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import AdminLayout from "./layouts/AdminLayout";
+import DashboardPage from "./pages/admin/DashboardPage";
+import EventsListPage from "./pages/admin/EventsListPage";
+import OrdersListPage from "./pages/admin/OrdersListPage";
+import {
+  VenuesListPage, CitiesListPage, ArticlesListPage, CollectionsListPage,
+  SuppliersListPage, TagsListPage, ReviewsListPage, SupportListPage,
+  ReconciliationPage, SeoAuditPage, SettingsPage, PromoBlocksPage, UsersPage
+} from "./pages/admin/CrudPages";
+import HomePage from "./pages/public/HomePage";
+import CatalogPage from "./pages/public/CatalogPage";
+import EventPage from "./pages/public/EventPage";
 
 const queryClient = new QueryClient();
 
@@ -15,8 +26,31 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Public */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/events" element={<CatalogPage />} />
+          <Route path="/events/:slug" element={<EventPage />} />
+
+          {/* Admin */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<DashboardPage />} />
+            <Route path="events" element={<EventsListPage />} />
+            <Route path="orders" element={<OrdersListPage />} />
+            <Route path="venues" element={<VenuesListPage />} />
+            <Route path="cities" element={<CitiesListPage />} />
+            <Route path="suppliers" element={<SuppliersListPage />} />
+            <Route path="tags" element={<TagsListPage />} />
+            <Route path="articles" element={<ArticlesListPage />} />
+            <Route path="collections" element={<CollectionsListPage />} />
+            <Route path="promo" element={<PromoBlocksPage />} />
+            <Route path="reviews" element={<ReviewsListPage />} />
+            <Route path="reconciliation" element={<ReconciliationPage />} />
+            <Route path="support" element={<SupportListPage />} />
+            <Route path="seo" element={<SeoAuditPage />} />
+            <Route path="users" element={<UsersPage />} />
+            <Route path="settings" element={<SettingsPage />} />
+          </Route>
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
