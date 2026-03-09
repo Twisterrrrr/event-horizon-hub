@@ -31,6 +31,7 @@ import SupplierDashboardPage from "./pages/supplier/DashboardPage";
 import SupplierEventsListPage from "./pages/supplier/EventsListPage";
 import SupplierReportsPage from "./pages/supplier/ReportsPage";
 import SupplierSettingsPage from "./pages/supplier/SettingsPage";
+import SupplierNotificationsPage from "./pages/supplier/NotificationsPage";
 
 // Public
 import HomePage from "./pages/public/HomePage";
