@@ -26,6 +26,7 @@ const mainNav = [
 
 const catalogNav = [
   { title: "События", url: "/admin/events", icon: Calendar, badge: 8 },
+  { title: "Модерация", url: "/admin/moderation", icon: ShieldCheck, badge: 4, attention: true },
   { title: "Площадки", url: "/admin/venues", icon: Building2 },
   { title: "Города", url: "/admin/cities", icon: Globe },
   { title: "Поставщики", url: "/admin/suppliers", icon: Truck, attention: true },
