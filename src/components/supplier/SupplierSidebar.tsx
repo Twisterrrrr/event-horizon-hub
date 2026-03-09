@@ -12,6 +12,7 @@ import { mockSupplierProfile, mockSupplierStats } from "@/data/supplier-mock";
 const navItems = [
   { title: "Дашборд", url: "/supplier", icon: LayoutDashboard },
   { title: "Мои события", url: "/supplier/events", icon: Calendar, badge: mockSupplierStats.pendingEvents },
+  { title: "Уведомления", url: "/supplier/notifications", icon: Bell, badge: 4 },
   { title: "Отчёты", url: "/supplier/reports", icon: BarChart3 },
   { title: "Настройки", url: "/supplier/settings", icon: Settings },
 ];

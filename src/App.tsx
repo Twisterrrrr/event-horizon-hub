@@ -61,6 +61,7 @@ const App = () => (
             <Route index element={<SupplierDashboardPage />} />
             <Route path="events" element={<SupplierEventsListPage />} />
             <Route path="events/:id" element={<SupplierEventsListPage />} />
+            <Route path="notifications" element={<SupplierNotificationsPage />} />
             <Route path="reports" element={<SupplierReportsPage />} />
             <Route path="settings" element={<SupplierSettingsPage />} />
           </Route>
