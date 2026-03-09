@@ -8,11 +8,18 @@ import AdminLayout from "./layouts/AdminLayout";
 import DashboardPage from "./pages/admin/DashboardPage";
 import EventsListPage from "./pages/admin/EventsListPage";
 import OrdersListPage from "./pages/admin/OrdersListPage";
-import {
-  VenuesListPage, CitiesListPage, ArticlesListPage, CollectionsListPage,
-  SuppliersListPage, TagsListPage, ReviewsListPage, SupportListPage,
-  ReconciliationPage, SeoAuditPage, SettingsPage, PromoBlocksPage, UsersPage
-} from "./pages/admin/CrudPages";
+import VenuesListPage from "./pages/admin/VenuesListPage";
+import CitiesListPage from "./pages/admin/CitiesListPage";
+import ArticlesListPage from "./pages/admin/ArticlesListPage";
+import CollectionsListPage from "./pages/admin/CollectionsListPage";
+import SuppliersListPage from "./pages/admin/SuppliersListPage";
+import TagsListPage from "./pages/admin/TagsListPage";
+import ReviewsListPage from "./pages/admin/ReviewsListPage";
+import ReconciliationPage from "./pages/admin/ReconciliationPage";
+import SeoAuditPage from "./pages/admin/SeoAuditPage";
+import SettingsPage from "./pages/admin/SettingsPage";
+import SupportListPage from "./pages/admin/SupportListPage";
+import { PromoBlocksPage, UsersPage } from "./pages/admin/CrudPages";
 import HomePage from "./pages/public/HomePage";
 import CatalogPage from "./pages/public/CatalogPage";
 import EventPage from "./pages/public/EventPage";
