@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
+
+// Admin
 import AdminLayout from "./layouts/AdminLayout";
 import DashboardPage from "./pages/admin/DashboardPage";
 import EventsListPage from "./pages/admin/EventsListPage";
@@ -20,6 +22,16 @@ import SeoAuditPage from "./pages/admin/SeoAuditPage";
 import SettingsPage from "./pages/admin/SettingsPage";
 import SupportListPage from "./pages/admin/SupportListPage";
 import { PromoBlocksPage, UsersPage } from "./pages/admin/CrudPages";
+
+// Supplier
+import SupplierLayout from "./layouts/SupplierLayout";
+import SupplierLoginPage, { SupplierRegisterPage } from "./pages/supplier/LoginPage";
+import SupplierDashboardPage from "./pages/supplier/DashboardPage";
+import SupplierEventsListPage from "./pages/supplier/EventsListPage";
+import SupplierReportsPage from "./pages/supplier/ReportsPage";
+import SupplierSettingsPage from "./pages/supplier/SettingsPage";
+
+// Public
 import HomePage from "./pages/public/HomePage";
 import CatalogPage from "./pages/public/CatalogPage";
 import EventPage from "./pages/public/EventPage";
@@ -37,6 +49,19 @@ const App = () => (
           <Route path="/" element={<HomePage />} />
           <Route path="/events" element={<CatalogPage />} />
           <Route path="/events/:slug" element={<EventPage />} />
+
+          {/* Supplier Auth */}
+          <Route path="/supplier/login" element={<SupplierLoginPage />} />
+          <Route path="/supplier/register" element={<SupplierRegisterPage />} />
+
+          {/* Supplier Portal */}
+          <Route path="/supplier" element={<SupplierLayout />}>
+            <Route index element={<SupplierDashboardPage />} />
+            <Route path="events" element={<SupplierEventsListPage />} />
+            <Route path="events/:id" element={<SupplierEventsListPage />} />
+            <Route path="reports" element={<SupplierReportsPage />} />
+            <Route path="settings" element={<SupplierSettingsPage />} />
+          </Route>
 
           {/* Admin */}
           <Route path="/admin" element={<AdminLayout />}>
