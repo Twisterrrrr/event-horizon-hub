@@ -110,7 +110,7 @@ export function AdminSidebar() {
                                 )}
                                 {'badge' in item && item.badge && (
                                   <Badge variant="secondary" className="h-5 min-w-5 text-[10px] justify-center">
-                                    {item.badge}
+                                    {item.badge as React.ReactNode}
                                   </Badge>
                                 )}
                               </span>
